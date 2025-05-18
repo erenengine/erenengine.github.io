@@ -1,0 +1,77 @@
+:root {
+  --docs-background-color: var(--sl-color-neutral-0);
+  --docs-border-color: var(--sl-color-neutral-200);
+  --docs-border-width: 1px;
+  --docs-border-radius: var(--sl-border-radius-medium);
+  --docs-content-max-width: 860px;
+  --docs-sidebar-width: 320px;
+  --docs-sidebar-transition-speed: 250ms;
+  --docs-content-toc-max-width: 260px;
+  --docs-content-padding: 2rem;
+  --docs-content-vertical-spacing: 2rem;
+  --docs-search-overlay-background: rgb(0 0 0 / 0.2);
+  --docs-skip-to-main-width: 200px;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  line-height: var(--sl-line-height-normal);
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  position: relative;
+  padding: var(--docs-content-vertical-spacing) var(--docs-content-padding) calc(var(--docs-content-vertical-spacing) * 2) var(--docs-content-padding);
+}
+
+.logo {
+  width: 120px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 2rem;
+  position: relative;
+  max-width: var(--docs-content-max-width);
+  margin: 0 auto;
+}
+
+.content__body {
+  order: 1;
+  width: 100%;
+}
+
+.card-header [slot='header'] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-header h3 {
+  margin: 0;
+}
+
+.card-header sl-icon-button {
+  font-size: var(--sl-font-size-medium);
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+sl-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+sl-card::part(base) {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

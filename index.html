@@ -5,36 +5,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eren Engine</title>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/dark.css" />
   <script type="module"
     src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body style="font-family: sans-serif; padding: 2rem;">
+<body>
+  <main>
+    <article id="content" class="content">
+      <div class="content__body">
 
-  <h1>👋 Shoelace UI 샘플</h1>
+        <h1>에렌 엔진</h1>
 
-  <sl-input placeholder="이름을 입력하세요" label="이름" clearable></sl-input>
-  <br /><br />
+        <img src="logo.jpg" alt="Eren Engine Logo" class="logo" />
 
-  <sl-button variant="primary" onclick="showModal()">모달 열기</sl-button>
+        <div class="card-list">
+          <sl-card class="card-header">
+            <div slot="header">
+              소스 코드
+              <a href="https://github.com/erenengine/eren" target="_blank"><sl-icon-button name="box-arrow-up-right"
+                  label="Open in new tab"></sl-icon-button></a>
+            </div>
 
-  <sl-dialog label="Shoelace 모달" id="my-modal">
-    <p>이것은 Shoelace 모달입니다.</p>
-    <sl-button slot="footer" variant="primary" onclick="closeModal()">닫기</sl-button>
-  </sl-dialog>
+            에렌 엔진의 소스코드 저장소입니다. 에렌 엔진은 오픈 소스 프로젝트이며, 누구나 자유롭게 사용하고 기여할 수 있습니다.
+          </sl-card>
 
-  <script>
-    const modal = document.getElementById('my-modal');
+          <sl-card class="card-header">
+            <div slot="header">
+              네이버 카페
+              <a href="https://cafe.naver.com/erenengine" target="_blank"><sl-icon-button name="box-arrow-up-right"
+                  label="Open in new tab"></sl-icon-button></a>
+            </div>
 
-    function showModal() {
-      modal.show();
-    }
+            에렌 엔진의 공식 카페입니다. 에렌 엔진에 대한 정보와 자료를 공유하고, 질문과 답변을 나눌 수 있는 공간입니다.
+          </sl-card>
 
-    function closeModal() {
-      modal.hide();
-    }
-  </script>
+          <sl-card class="card-header">
+            <div slot="header">
+              공식 디스코드
+              <a href="https://discord.gg/VyeJKK4c7J" target="_blank"><sl-icon-button name="box-arrow-up-right"
+                  label="Open in new tab"></sl-icon-button></a>
+            </div>
+
+            에렌 엔진의 공식 디스코드 서버입니다. 에렌 엔진에 대한 질문과 답변을 나누고, 다른 사용자들과 소통할 수 있는 공간입니다.
+          </sl-card>
+
+        </div>
+      </div>
+    </article>
+  </main>
 
 </body>
 
